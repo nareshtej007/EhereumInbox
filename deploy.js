@@ -13,9 +13,9 @@ const deploy = async () => {
 
     console.log('Attempting to deploy from account', accounts[0]);
 
-    const result = await new web3.eth.Contract(JSON.parse(interface)) //web3 is instance of Web3 and accesing ethereum using eth and creating new contract 
+    const result = await new web3.eth.Contract(JSON.parse(interface)) //web3 is instance of Web3(we can connect to ehtereum) and accesing ethereum using eth and creating new contract 
   
-    .deploy({ data: bytecode, arguments: ['Hi there!']})
+    .deploy({ data: bytecode]})
     .send({ gas: '1000000', from: accounts[0] });
     
     console.log('Contract deployed to', result.options.address);
